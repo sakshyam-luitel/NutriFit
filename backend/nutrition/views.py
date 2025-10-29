@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 from django.utils import timezone
+from django.db import models as django_models
 from datetime import datetime, timedelta
 from .models import Food, MealRecommendation, NutritionPlan
 from .serializers import FoodSerializer, MealRecommendationSerializer, NutritionPlanSerializer
