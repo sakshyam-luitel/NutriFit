@@ -26,7 +26,7 @@ class SeasonalFoodsView(generics.ListAPIView):
     def get_queryset(self):
         season = self.kwargs.get('season', 'all')
         return Food.objects.filter(is_available=True).filter(
-            models.Q(season=season) | models.Q(season='all')
+            django_models.Q(season=season) | django_models.Q(season='all')
         )
 
 class MealRecommendationListView(generics.ListAPIView):
